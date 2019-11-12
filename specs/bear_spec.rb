@@ -31,9 +31,11 @@ class BearTest < MiniTest::Test
 
   def test_add_fish_to_bear()
     @river.add_fish(@fish1)
+    @river.add_fish(@fish2)
+    @river.add_fish(@fish3)
     @bear1.add_fish_from_river(@river)
     assert_equal(1, @bear1.fullness)
-    assert_equal(0, @river.fish_count)
+    assert_equal(2, @river.fish_count)
   end
 
 

@@ -18,8 +18,8 @@ attr_reader :name, :type
 
   def add_fish_from_river(river)
     for fish in river.fish()
-      add_fish(fish)
     end
+    add_fish(fish)
     river.remove_fish(fish)
   end
 
